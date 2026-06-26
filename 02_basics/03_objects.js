@@ -1,13 +1,16 @@
 /**Object: In JavaScript, an object is a collection of key-value pairs. Think of it like a container that holds related data and functionality together.
  * syntax: const my object = {}
  * 
+ * Object.create
+ * 1-object literals
+ * 2-singleton/ construct
+ * 
  */
 
 
-// singleton
-// Object.create
 
-// object literals
+
+//1-object literals
  
 const mySym = Symbol("key1");
 
