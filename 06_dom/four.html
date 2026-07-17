@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit and Remove Element</title>
+</head>
+<body style="background-color:black; color:white;">
+<ul class="language">
+    <li>javascript</li>
+</ul>
+    
+</body>
+<script>
+    // create an element
+    function addLanguages(lagName){
+      const list =  document.createElement('li');
+      list.innerHTML = `${lagName}`;
+      document.querySelector('.language').appendChild(list)
+        
+    }
+    addLanguages("typescript")
+    addLanguages("Pyton")
+// create an element
+    function addOptLang(lagName){
+       const list = document.createElement('li')
+       list.appendChild(document.createTextNode(lagName))
+       document.querySelector('.language').appendChild(list)
+    }
+   addOptLang("golang")
+   
+//edit an element
+const secLang = document.querySelector("li:nth-child(2)")
+console.log(secLang)
+// secLang.innerHTML = "heelo"
+const list = document.createElement('li')
+list.textContent= "hello"
+secLang.replaceWith(list)
+
+// edit an element
+const firstLang = document.querySelector("li:first-child")
+firstLang.outerHTML = '<li>Laravel</li>'
+
+//remove an element 
+const lastChild = document.querySelector('li:last-child')
+lastChild.remove()
+    
+
+</script>
+</html>
